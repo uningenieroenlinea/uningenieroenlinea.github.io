@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Esta etiqueta es la más importante para la responsividad. Le dice al navegador cómo ajustar la página al tamaño de la pantalla del dispositivo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recupera el Control de tu Obra - Webinar Gratuito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #111827; }
+        .font-headline { font-family: 'Montserrat', sans-serif; }
+        .hero-section { background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop'); background-size: cover; background-position: center; }
+        .cta-button { background: linear-gradient(90deg, #3b82f6, #2563eb); transition: all 0.3s ease-in-out; }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.25); }
+        .angled-section-top { clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%); }
+        .countdown-box { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .dolor-section { background: linear-gradient(110deg, #111827 50%, #1e40af 150%); }
+        .expert-card { background-color: rgba(31, 41, 55, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .learning-card { transition: transform 0.3s ease-in-out; }
+        .learning-card:hover { transform: scale(1.03); }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <section class="hero-section pt-12 pb-8 sm:pt-20 sm:pb-12">
+        <!-- El contenedor se centra y tiene un ancho máximo para legibilidad en pantallas grandes, pero es 100% flexible en móviles. -->
+        <div class="container mx-auto max-w-4xl text-center px-4">
+            <span class="inline-block bg-yellow-400 text-gray-900 text-sm font-bold px-4 py-1 rounded-full mb-4">CLASE EN VIVO Y 100% GRATUITA</span>
+            <!-- El tamaño del texto cambia de 4xl en móviles a 6xl en pantallas medianas (md) y superiores. -->
+            <h1 class="font-headline text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">Recupera el Control de tu Obra</h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 mb-8">Descubre el método exacto para que tus cronogramas por fin se cumplan, dejes de "apagar incendios" y tu equipo trabaje alineado con la planificación.</p>
+            <div class="inline-block bg-gray-900/50 border border-blue-500 text-white font-bold text-lg md:text-xl rounded-lg px-6 md:px-8 py-4 mb-8">🗓️ Lunes, 01 de Septiembre | 🕖 7:00 PM (Hora Colombia/Perú)</div>
+            <div id="countdown" class="grid grid-cols-4 gap-4 max-w-sm mx-auto mb-8 text-white">
+                <div class="countdown-box rounded-lg p-3"><div id="days" class="text-3xl font-bold">00</div><div class="text-xs">Días</div></div>
+                <div class="countdown-box rounded-lg p-3"><div id="hours" class="text-3xl font-bold">00</div><div class="text-xs">Horas</div></div>
+                <div class="countdown-box rounded-lg p-3"><div id="minutes" class="text-3xl font-bold">00</div><div class="text-xs">Minutos</div></div>
+                <div class="countdown-box rounded-lg p-3"><div id="seconds" class="text-3xl font-bold">00</div><div class="text-xs">Segundos</div></div>
+            </div>
+            <a href="#formulario" class="cta-button inline-block text-white font-bold text-xl rounded-lg px-10 py-5 shadow-lg">👉 QUIERO MI CUPO 100% GRATUITO</a>
+            <div class="max-w-md mx-auto mt-4"><p class="text-xs text-gray-400 italic">*Esto NO es un lanzamiento de ventas. Es el primer paso para crear una comunidad de constructores que se rehúsan a seguir cometiendo los mismos errores. Valor puro, sin trucos.</p></div>
+        </div>
+    </section>
+
+    <div class="container mx-auto max-w-4xl pt-16 pb-16 px-4 sm:pt-24 sm:pb-24 sm:px-6 lg:px-8">
+        <section class="dolor-section rounded-2xl p-8 md:p-12 mb-16 md:mb-24">
+            <!-- En móviles se apila (una columna), en pantallas medianas (md) y superiores, se divide en dos columnas. -->
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="text-left">
+                    <h2 class="text-3xl font-bold text-white mb-6">¿Tu día a día en la obra es un caos? 😫</h2>
+                    <div class="space-y-4 text-lg text-gray-300">
+                        <p>🔥 <strong class="text-white">¿El cronograma es letra muerta?</strong> Pasas horas en un Gantt que a la segunda semana ya nadie respeta.</p>
+                        <p>🤯 <strong class="text-white">¿Vives reaccionando?</strong> Tu jornada consiste en saltar de un problema a otro, sin poder ejecutar lo importante.</p>
+                        <p>🤦‍♂️ <strong class="text-white">¿Hay una total desconexión?</strong> Lo que se planea en la oficina parece una fantasía imposible de cumplir en campo.</p>
+                        <p>📉 <strong class="text-white">¿Cero datos, solo excusas?</strong> Llegas al final del mes sin saber con certeza por qué no se cumplió la meta.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://uningenieroenlinea.github.io/dolor.png" alt="Ingeniero con dolor de cabeza por problemas en obra" class="w-full h-auto rounded-xl shadow-2xl transform md:scale-125">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">En esta Masterclass Gratuita vas a descubrir cómo:</h2>
+            <div class="space-y-6">
+                <div class="learning-card bg-gray-800 rounded-xl shadow-lg p-6 flex items-center space-x-5 border-l-4 border-blue-500"><svg class="h-8 w-8 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg">🚀 <strong class="text-white">Implementar el Last Planner System (LPS)</strong> de forma sencilla, incluso si nunca lo has usado.</p></div>
+                <div class="learning-card bg-gray-800 rounded-xl shadow-lg p-6 flex items-center space-x-5 border-l-4 border-blue-500"><svg class="h-8 w-8 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg">💡 <strong class="text-white">Crear un Plan Semanal que SÍ se cumple</strong> y aumenta la predictibilidad de tu proyecto (PPC).</p></div>
+                <div class="learning-card bg-gray-800 rounded-xl shadow-lg p-6 flex items-center space-x-5 border-l-4 border-blue-500"><svg class="h-8 w-8 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><p class="text-lg">📈 <strong class="text-white">Medir las métricas que de verdad importan</strong> para tomar decisiones basadas en datos, no en intuición.</p></div>
+            </div>
+        </section>
+
+        <section class="text-center mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold text-white mb-10">Impartido por Ingenieros de Campo para Ingenieros de Campo</h2>
+            <!-- En móviles se apila (flex-col), en pantallas medianas (md) y superiores, se muestra en fila (flex-row). -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
+                <div class="expert-card flex flex-col items-center max-w-xs p-6 rounded-xl">
+                    <img class="h-40 w-40 rounded-full object-cover mb-4 shadow-lg border-4 border-gray-700" src="https://uningenieroenlinea.github.io/Oscar.png" alt="Foto de Oscar Angarita">
+                    <h3 class="text-2xl font-bold text-white">Ing. Oscar Angarita</h3><p class="text-blue-400 font-semibold mb-2">Creador de 'Un Ingeniero En Línea'</p><p class="text-gray-400 text-sm">Más de 14 años de experiencia en la gestión y construcción de proyectos, ayudando a profesionales a optimizar su trabajo en obra.</p>
+                </div>
+                <div class="expert-card flex flex-col items-center max-w-xs p-6 rounded-xl">
+                    <img class="h-40 w-40 rounded-full object-cover mb-4 shadow-lg border-4 border-gray-700" src="https://uningenieroenlinea.github.io/Walter.png" alt="Foto de Walter Meléndez" style="object-position: 50% 30%;">
+                    <h3 class="text-2xl font-bold text-white">Ing. Walter Meléndez</h3><p class="text-blue-400 font-semibold mb-2">Experto en Lean Construction</p><p class="text-gray-400 text-sm">Consultor especialista en la implementación de metodologías Lean para optimizar la productividad y rentabilidad en proyectos de construcción.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario" class="bg-white text-gray-800 rounded-xl shadow-2xl p-8 md:p-12 angled-section-top">
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-3">¡Tu cupo gratuito te está esperando!</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Regístrate ahora y transforma la gestión de tus obras.
+                    <br>
+                    <strong class="text-blue-600">Los asistentes a la clase en vivo recibirán un pack de plantillas 100% gratuitas.</strong>
+                </p>
+            </div>
+            <div class="max-w-lg mx-auto overflow-hidden" style="height: 580px;">
+                <iframe src="https://tyo99.share.hsforms.com/28mwLXCPHTr-jOG5LwhAP8w"
+                        style="width:100%; height:650px; border:none; margin-top: -30px;">
+                </iframe>
+            </div>
+        </section>
+        
+        <footer class="text-center mt-16"><p class="text-sm text-gray-600">&copy; 2025 Un Ingeniero en Línea & Walter Meléndez. Todos los derechos reservados.</p></footer>
+    </div>
+
+    <script>
+        const countdown = () => {
+            const countDate = new Date('September 1, 2025 19:00:00').getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
+            if (gap < 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                return;
+            }
+            const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
+            const textDay = Math.floor(gap / day), textHour = Math.floor((gap % day) / hour), textMinute = Math.floor((gap % hour) / minute), textSecond = Math.floor((gap % minute) / second);
+            document.getElementById('days').innerText = textDay < 10 ? '0' + textDay : textDay;
+            document.getElementById('hours').innerText = textHour < 10 ? '0' + textHour : textHour;
+            document.getElementById('minutes').innerText = textMinute < 10 ? '0' + textMinute : textMinute;
+            document.getElementById('seconds').innerText = textSecond < 10 ? '0' + textSecond : textSecond;
+        };
+        countdown(); setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
